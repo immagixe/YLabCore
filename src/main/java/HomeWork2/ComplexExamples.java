@@ -70,8 +70,9 @@ public class ComplexExamples {
         System.out.println("Duplicate filtered, grouped by name, sorted by name and id:");
         System.out.println();
 
-        TreeMap<String, Long> resultPersonMap = Arrays.stream(RAW_DATA)
+        Map<String, Long> resultPersonMap = Arrays.stream(RAW_DATA)
                 .filter(Objects::nonNull)
+                .filter(person -> person.getName() != null)
                 .distinct()
                 .sorted(Comparator.comparing(Person::getId))
                 .collect(Collectors.groupingBy(Person::getName, TreeMap::new, Collectors.counting()));
