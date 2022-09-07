@@ -3,8 +3,6 @@ package main.java.HomeWork2;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.groupingBy;
-
 public class ComplexExamples {
 
     static class Person {
@@ -39,6 +37,7 @@ public class ComplexExamples {
     }
 
     private static Person[] RAW_DATA = new Person[]{
+
             new Person(0, "Harry"),
             new Person(0, "Harry"), // дубликат
             new Person(1, "Harry"), // тёзка
@@ -54,6 +53,8 @@ public class ComplexExamples {
     };
 
     public static void main(String[] args) {
+
+
         System.out.println("Raw data:");
         System.out.println();
 
@@ -69,16 +70,11 @@ public class ComplexExamples {
         System.out.println("Duplicate filtered, grouped by name, sorted by name and id:");
         System.out.println();
 
-        List<Person> personList = Arrays.asList(RAW_DATA);
-
-        Map<String, Long> resultPersonMap = personList.stream()
+        TreeMap<String, Long> resultPersonMap = Arrays.stream(RAW_DATA)
+                .filter(Objects::nonNull)
                 .distinct()
-                .collect(Collectors.collectingAndThen(groupingBy(Person::getName, Collectors.counting()),
-                        map -> map.entrySet()
-                                .stream()
-                                .sorted(Map.Entry.comparingByKey())
-                                .collect((Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
-                                        (e1, e2) -> e1, TreeMap::new)))));
+                .sorted(Comparator.comparing(Person::getId))
+                .collect(Collectors.groupingBy(Person::getName, TreeMap::new, Collectors.counting()));
 
         resultPersonMap.forEach((key, value) -> System.out.println("Key: " + key + "\n" + "Value: " + value));
 
@@ -130,39 +126,32 @@ public class ComplexExamples {
 
     public static void printPairOfNumbersThatGivesRequiredSum(int[] array, int requiredSum) {
 
-        int[] resultArray = new int[2];
-        boolean pairOfNumbersExists = false;
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] + array[j] == requiredSum) {
-                    resultArray[0] = array[i];
-                    resultArray[1] = array[j];
-                    pairOfNumbersExists = true;
-                    break;
-                }
+        HashSet<Integer> s = new HashSet<>();
+
+        for (int number : array) {
+            int temp = requiredSum - number;
+            if (s.contains(temp)) {
+                System.out.println("[" + temp + ", " + number + "]");
+                break;
+            } else {
+                s.add(number);
             }
         }
-        String result = (pairOfNumbersExists ?
-                Arrays.toString(array) + ", " + requiredSum + " -> " + Arrays.toString(resultArray) :
-                "There are no numbers in the array whose sum is equal to " + requiredSum);
-
-        System.out.println(result);
     }
 
-    private static boolean fuzzySearch(String searchString, String givenString) {
+    public static boolean fuzzySearch(String searchString, String givenString) {
 
-        int countPointer = -1;
-        int matchedChars = 0;
+        if (searchString.length() > givenString.length())
+            return false;
 
-        for (int i = 0; i < searchString.length(); i++) {
-            for (int j = 0; j < givenString.length(); j++) {
-                if (searchString.charAt(i) == givenString.charAt(j) && j > countPointer) {
-                    countPointer = j;
-                    matchedChars++;
-                    break;
+        for (int i = 0; i < givenString.length(); i++) {
+            if (givenString.charAt(i) == searchString.charAt(0)) {
+                searchString = searchString.substring(1);
+                if (searchString.length() == 0) {
+                    return true;
                 }
             }
         }
-        return matchedChars == searchString.length();
+        return false;
     }
 }

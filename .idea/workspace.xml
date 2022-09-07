@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89a11a7c-e727-4ef9-8895-d7042d8bf0d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HomeWork2/ComplexExamples.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HomeWork2/ComplexExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomeWork2/ComplexExamples.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,20 +29,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/JavaProjects/YLabCore",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/JavaProjects/YLabCore&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\JavaProjects\YLabCore\src\main\java\" />
       <recent name="C:\Users\User\Desktop\JavaProjects\YLabCore\src\main\java\task1" />
       <recent name="C:\Users\User\Desktop\JavaProjects\YLabCore\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\JavaProjects\YLabCore\src\main\java\HomeWork2" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ComplexExamples">
@@ -55,6 +58,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComplexExamplesA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ComplexExamplesA" />
+      <module name="YLabCore" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,7 +95,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main.java.HomeWork2.ComplexExamplesA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.HomeWork2.ComplexExamplesA" />
+      <module name="YLabCore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.HomeWork2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.ComplexExamplesA" />
+      <item itemvalue="Application.main.java.HomeWork2.ComplexExamplesA" />
       <item itemvalue="Application.ComplexExamples" />
       <item itemvalue="Application.MainTask1" />
       <item itemvalue="Application.MainTask2" />
@@ -93,6 +118,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ComplexExamples" />
+        <item itemvalue="Application.main.java.HomeWork2.ComplexExamplesA" />
+        <item itemvalue="Application.ComplexExamplesA" />
         <item itemvalue="Application.MainTask2" />
         <item itemvalue="Application.MainTask1" />
       </list>
@@ -107,7 +134,8 @@
       <option name="presentableId" value="Default" />
       <updated>1661618913506</updated>
       <workItem from="1661618914732" duration="701000" />
-      <workItem from="1662471293149" duration="366000" />
+      <workItem from="1662471293149" duration="14167000" />
+      <workItem from="1662533340267" duration="9008000" />
     </task>
     <servers />
   </component>
