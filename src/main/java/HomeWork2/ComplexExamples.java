@@ -127,15 +127,15 @@ public class ComplexExamples {
 
     public static void printPairOfNumbersThatGivesRequiredSum(int[] array, int requiredSum) {
 
-        HashSet<Integer> s = new HashSet<>();
+        HashSet<Integer> setOfNumbers = new HashSet<>();
 
         for (int number : array) {
             int temp = requiredSum - number;
-            if (s.contains(temp)) {
+            if (setOfNumbers.contains(temp)) {
                 System.out.println("[" + temp + ", " + number + "]");
                 break;
             } else {
-                s.add(number);
+                setOfNumbers.add(number);
             }
         }
     }
